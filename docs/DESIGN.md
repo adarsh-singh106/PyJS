@@ -28,7 +28,7 @@ Source Code ──► Lexer/Parser (Esprima) ──► AST (ESTree JSON) ──�
 ## 2. Core Execution Subsystems
 
 ### A. The Environment Scope Chain
-To model standard JavaScript lexical scoping rules (including closures, block scoping, and global hoisting), the interpreter implements the [Environment](file:///D:/CSE57_26-27_3rd-year/Strike's-Thunder-Series-Hackathons/02-hackathon/interpreter/environment.py) class.
+To model standard JavaScript lexical scoping rules (including closures, block scoping, and global hoisting), the interpreter implements the [Environment](../interpreter/environment.py) class.
 
 * **Block Scopes (`let`, `const`):** Created as fresh `Environment` instances nested within the active scope, pointing to the enclosing environment via the `outer` pointer.
 * **Function/Global Scopes (`var`):** Hoisted to the closest enclosing function or global environment by climbing up the environment chain until `is_function_scope` is `True` or `outer` is `None`.
@@ -45,7 +45,7 @@ This double-pass mechanism ensures calling functions or referencing `var` variab
 
 ## 3. Custom Value & Type System
 
-Since Python primitives behave differently from JavaScript, PyJS implements a custom boxing and translation layer inside [interpreter/runtime.py](file:///D:/CSE57_26-27_3rd-year/Strike's-Thunder-Series-Hackathons/02-hackathon/interpreter/runtime.py):
+Since Python primitives behave differently from JavaScript, PyJS implements a custom boxing and translation layer inside [interpreter/runtime.py](../interpreter/runtime.py):
 
 * **Undefined:** Represented by a singleton object `UNDEFINED`.
 * **Null:** Represented natively by Python's `None`.
