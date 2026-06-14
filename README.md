@@ -68,18 +68,28 @@ cd PyJS
 ```
 
 ### 2. Install Dependencies
+
 You can install dependencies globally:
 ```bash
 pip install -r requirements.txt   # Or: pip3 install -r requirements.txt
 ```
 
-Or set up and install using a virtual environment:
+---
+
+### 3. Setting Up a Virtual Environment (Optional)
+Using a virtual environment prevents conflicts with global system packages:
+
 ```bash
 # Create environment
 python -m venv venv   # Or: python3 -m venv venv
 
-# Activate environment
-source venv/bin/activate  # On Windows (cmd/PowerShell): venv\Scripts\activate
+# Activate environment based on your shell:
+# 1. Windows PowerShell:
+.\venv\Scripts\Activate.ps1
+# 2. Windows Command Prompt (CMD):
+venv\Scripts\activate.bat
+# 3. Git Bash / macOS / Linux:
+source venv/Scripts/activate   # (macOS/Linux: source venv/bin/activate)
 
 # Install requirements
 pip install -r requirements.txt
@@ -88,6 +98,12 @@ pip install -r requirements.txt
 ---
 
 ## 🚀 Usage Instructions
+
+### 0. Scratchpad / Manual Testing
+We have provided a [test.js](./test.js) scratchpad file in the root of the project. You can copy/paste any custom or hidden JavaScript test snippets into it and execute them directly:
+```bash
+python main.py test.js   # Or: python3 main.py test.js
+```
 
 ### 1. Running a JavaScript File
 Execute any JavaScript file by passing the path as a positional argument (use `python3` on macOS/Linux):
