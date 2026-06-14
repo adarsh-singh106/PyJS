@@ -54,20 +54,26 @@ JS Source Code ──► Lexer/Parser (Esprima) ──► AST (ESTree JSON) ─�
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation & Setup
 
 Ensure you have **Python 3.10+** installed. Depending on your operating system, use:
 * **Windows:** `python` and `pip`
 * **macOS / Linux:** `python3` and `pip3`
 
-Install the single dependency (`esprima`) using your package manager:
-
+### 1. Clone the Repository
+Clone the repository from GitHub and navigate into the project directory:
 ```bash
-pip install esprima   # Or: pip3 install esprima
+git clone https://github.com/adarsh-singh106/PyJS.git
+cd PyJS
+```
+
+### 2. Install Dependencies
+You can install dependencies globally:
+```bash
+pip install -r requirements.txt   # Or: pip3 install -r requirements.txt
 ```
 
 Or set up and install using a virtual environment:
-
 ```bash
 # Create environment
 python -m venv venv   # Or: python3 -m venv venv
